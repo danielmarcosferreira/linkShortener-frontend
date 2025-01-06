@@ -14,6 +14,7 @@ export default function HomePage() {
 
     const navigateLogin = (e) => {
         e.preventDefault()
+        console.log("Entered here")
         navigate("/login")
     }
 
@@ -21,8 +22,8 @@ export default function HomePage() {
         <Container>
             <Header>
                 <Nav>
-                    <NavLink href={navigateSignUp}>Entrar</NavLink>
-                    <NavLink href={navigateLogin}>Cadastrar-se</NavLink>
+                    <NavLink onClick={navigateLogin}>Entrar</NavLink>
+                    <NavLink onClick={navigateSignUp}>Cadastrar-se</NavLink>
                 </Nav>
             </Header>
 
@@ -56,7 +57,6 @@ export default function HomePage() {
     );
 }
 
-// Styled Components
 const Container = styled.div`
     font-family: Arial, sans-serif;
     text-align: center;
@@ -98,8 +98,10 @@ const Nav = styled.nav`
     gap: 15px;
     `;
 
-const NavLink = styled.a`
+const NavLink = styled.button`
     text-decoration: none;
+    background-color: #FFF;
+    border: none;
     color: #666;
     font-size: 1rem;
 
