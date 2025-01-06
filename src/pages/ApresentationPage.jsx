@@ -1,36 +1,14 @@
 import React from "react";
 import styled from "styled-components";
-import LogoImage from "../assets/images/shorts-image.png"
 import { useNavigate } from "react-router-dom";
 
 
 export default function ApresentationPage() {
     const navigate = useNavigate()
 
-    const navigateSignUp = (e) => {
-        e.preventDefault()
-        navigate("/signup")
-    }
-
-    const navigateLogin = (e) => {
-        e.preventDefault()
-        console.log("Entered here")
-        navigate("/login")
-    }
-
     return (
         <Container>
-            <Header>
-                <Nav>
-                    <NavLink onClick={navigateLogin}>Entrar</NavLink>
-                    <NavLink onClick={navigateSignUp}>Cadastrar-se</NavLink>
-                </Nav>
-            </Header>
-
             <Main>
-                <Logo>
-                    Shortly <img src={LogoImage} />
-                </Logo>
                 <Title>🏆 Ranking</Title>
                 <RankingContainer>
                     <RankingItem>
@@ -64,50 +42,6 @@ const Container = styled.div`
     max-width: 1100px;
     margin: 0 auto;
     padding: 20px;
-    `;
-
-const Header = styled.header`
-    display: flex;
-    justify-content: right;
-    align-items: center;
-    padding: 10px 0;
-    `;
-
-const Logo = styled.h1`
-    font-size: 1.5rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 5px;
-
-    font-family: "Lexend Deca", serif;
-    font-size: 3.5rem;
-    font-weight: 150;
-
-    img {
-        width: 80px;
-    }
-    `;
-
-const Icon = styled.span`
-    font-size: 1.2rem;
-    `;
-
-const Nav = styled.nav`
-    display: flex;
-    gap: 15px;
-    `;
-
-const NavLink = styled.button`
-    text-decoration: none;
-    background-color: #FFF;
-    border: none;
-    color: #666;
-    font-size: 1rem;
-
-    &:hover {
-        text-decoration: underline;
-    }
     `;
 
 const Main = styled.main`

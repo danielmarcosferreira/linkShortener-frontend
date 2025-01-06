@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import LogoImage from "../assets/images/shorts-image.png";
 import { useNavigate } from "react-router-dom";
 
 export default function SignUpPage() {
@@ -41,25 +40,9 @@ export default function SignUpPage() {
         return errors;
     };
 
-    const navigateLogin = (e) => {
-        e.preventDefault();
-        navigate("/login");
-    };
-
     return (
         <Container>
-            <Header>
-                <Nav>
-                    <NavLink onClick={navigateLogin}>Entrar</NavLink>
-                    <NavLink>Cadastrar-se</NavLink>
-                </Nav>
-            </Header>
-
             <Main>
-                <Logo>
-                    Shortly <img src={LogoImage} alt="Shortly Logo" />
-                </Logo>
-
                 <FormContainer>
                     <Form onSubmit={handleFormSubmit}>
                         <Input
@@ -115,46 +98,6 @@ const Container = styled.div`
     max-width: 1100px;
     margin: 0 auto;
     padding: 20px;
-    `;
-
-const Header = styled.header`
-    display: flex;
-    justify-content: right;
-    align-items: center;
-    padding: 10px 0;
-    `;
-
-const Logo = styled.h1`
-    font-size: 1.5rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 5px;
-
-    font-family: "Lexend Deca", serif;
-    font-size: 3.5rem;
-    font-weight: 150;
-
-    img {
-        width: 80px;
-    }
-    `;
-
-const Nav = styled.nav`
-    display: flex;
-    gap: 15px;
-    `;
-
-const NavLink = styled.button`
-    background-color: #fff;
-    border: none;
-    color: #666;
-    font-size: 1rem;
-    cursor: pointer;
-
-    &:hover {
-        text-decoration: underline;
-    }
     `;
 
 const Main = styled.main`
