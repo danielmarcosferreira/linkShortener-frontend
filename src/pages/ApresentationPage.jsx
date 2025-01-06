@@ -4,7 +4,7 @@ import LogoImage from "../assets/images/shorts-image.png"
 import { useNavigate } from "react-router-dom";
 
 
-export default function HomePage() {
+export default function ApresentationPage() {
     const navigate = useNavigate()
 
     const navigateSignUp = (e) => {
