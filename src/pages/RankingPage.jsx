@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { useNavigate } from "react-router-dom";
 
 
-export default function ApresentationPage() {
+export default function RankingPage() {
     const navigate = useNavigate()
 
     return (
@@ -28,8 +28,6 @@ export default function ApresentationPage() {
                         37.707 visualizações
                     </RankingItem>
                 </RankingContainer>
-
-                <CallToAction>Crie sua conta para usar nosso serviço!</CallToAction>
             </Main>
         </Container>
     );
@@ -67,6 +65,7 @@ const RankingContainer = styled.div`
     border-radius: 8px;
     padding: 20px;
     box-shadow: 0px 4px 24px 0px #78B1591F;
+
     `;
 
 const RankingItem = styled.p`
@@ -76,11 +75,4 @@ const RankingItem = styled.p`
     strong {
         font-weight: bold;
     }
-    `;
-
-const CallToAction = styled.h3`
-    margin-top: 4rem;
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: #444;
     `;

@@ -64,7 +64,7 @@ const Container = styled.div`
     font-family: Arial, sans-serif;
     text-align: center;
     color: #333;
-    /* max-width: 1100px; */
+    max-width: 1200px;
     margin: 0 auto;
     padding: 20px 0;
     `;
@@ -83,17 +83,17 @@ const InputContainer = styled.div`
     display: flex;
     justify-content: center;
     gap: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 2rem;
     `;
 
 const Input = styled.input`
     flex: 1;
-    padding: 15px;
-    border: 1px solid #d9ead3;
+    padding: 12px;
+    border: 1px solid #78B15940;
     border-radius: 10px;
     font-size: 16px;
     outline: none;
-    background-color: #f9fff9;
+    box-shadow: 0px 4px 24px 0px #78B1591F;
 
     &:focus {
         border: 1px solid #4caf50;
@@ -102,10 +102,9 @@ const Input = styled.input`
 
 const Button = styled.button`
     padding: 15px 20px;
-    font-size: 16px;
-    font-weight: bold;
+    font-weight: 700;
     color: white;
-    background-color: #4caf50;
+    background-color: #5D9040;
     border: none;
     border-radius: 10px;
     cursor: pointer;
@@ -119,11 +118,11 @@ const LinkList = styled.div`
     width: 70%;
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
+    gap: 2rem;
     `;
 
 const LinkItem = styled.div`
-    height: 2.8rem;
+    height: 3.4rem;
     width: 100%;
     display: flex;
     align-items: center;
@@ -131,7 +130,7 @@ const LinkItem = styled.div`
     background-color: #81cc75;
     /* padding-left: 15px; */
     border-radius: 10px;
-    border: 1px solid #81cc75;
+    border: 1px solid #80CC74;
     padding: 0 120px 0 20px;
     position: relative;
     `;
@@ -178,11 +177,11 @@ const DeleteDiv = styled.div`
     cursor: pointer;
 
     ion-icon {
-        color: red;
+        color: #EA4F4F;
         font-size: 1.5rem;
     }
 
     &:hover {
-        background-color: #d32f2f;
+        background-color: #f2c4c4;
     }
 `

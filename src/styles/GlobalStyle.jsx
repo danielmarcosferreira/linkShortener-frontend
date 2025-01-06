@@ -30,6 +30,10 @@ export const GlobalStyles = createGlobalStyle`
         margin: 0;
         padding: 0;
         box-sizing: border-box;
+        font-family: Lexend Deca;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 17.5px;
     }
 
     html {
